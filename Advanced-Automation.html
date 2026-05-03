@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Automation | Hadil M. Hassan</title>
+    <!-- استدعاء نفس الخط اللي استخدمته في كودك -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #d4af37; /* نفس اللون الذهبي في كودك */
+            --bg: #050505;   /* نفس الخلفية */
+            --card-bg: #111;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            animation: fadeIn 1.2s ease;
+        }
+
+        /* زر العودة بنفس روح التصميم */
+        .back-btn {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid var(--gold);
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: 0.3s;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+        .back-btn:hover {
+            background: var(--gold);
+            color: var(--bg);
+            box-shadow: 0 0 15px var(--gold);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+            /* تأثير التدرج اللي استخدمته للنصوص */
+            background: linear-gradient(to right, #cf972d, #f1e37c, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cert-card {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 30px;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        .cert-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+        }
+
+        .cert-img {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .project-section {
+            margin-top: 60px;
+        }
+
+        .project-card {
+            background: rgba(212, 175, 55, 0.05); /* لمسة ذهبية خفيفة */
+            border-left: 4px solid var(--gold);
+            padding: 25px;
+            border-radius: 0 20px 20px 0;
+            margin-top: 20px;
+        }
+
+        h2 { color: var(--gold); font-weight: 600; }
+        p { color: #ccc; line-height: 1.8; }
+
+        /* الأنميشن اللي استخدمتها في كودك */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+
+        <header>
+            <h1>Advanced Automation</h1>
+            <p style="color: #888; font-size: 1.1rem;">CS50 Certified Python Solutions & Web Intelligence</p>
+        </header>
+
+        <section>
+            <h2>Verified Certificate</h2>
+            <div class="cert-card">
+                <img src="automation-cert.jpg" alt="CS50 Certificate" class="cert-img">
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Highlighted Project</h2>
+            <div class="project-card">
+                <h3 style="color: #fff; margin-top: 0;">Automated News Scraper (Python)</h3>
+                <p>A sophisticated tool designed to crawl news platforms, extract specific metadata, and organize it into professional Excel reports. Built with focus on efficiency and data accuracy.</p>
+                <a href="#" style="color: var(--gold); text-decoration: none; font-weight: bold;">View GitHub Repository ↗</a>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
+
