@@ -13,17 +13,41 @@
             background: radical-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(5,5,5,1) 100%), url('https://freepik.com');
             background-size: cover; background-position: center; text-align: center; padding: 20px;
         }
-        .hero h1 { 
-            font-size: 4rem;
-            display: block;
-            background: linear-gardient(to bottom, #f9e295 0%, #d4af37 50%, #a67c00 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: #d4af37;
-            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
-            margin: 0; letter-spacing: 8px; text-transform: uppercase; font-weight: 900;
-        }
+        h1 { 
+            font-size: 4rem; 
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin: 0;
+    /* تدرج لوني معدني يحاكي انعكاس الضوء */
+            background: linear-gradient(to bottom, #cf972d 22%, #f1d37e 45%, #d4af37 50%, #8a6c2f 78%, #7a5d28 100%);
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+    /* إضافة ظلال متعددة ليعطي عمق (3D) مثل البطاقة */
+           filter: drop-shadow(0px 1px 1px #000) 
+                drop-shadow(0px 2px 2px rgba(0,0,0,0.5)) 
+                drop-shadow(0px 4px 10px rgba(212, 175, 55, 0.3));
+    /* ضمان الوضوح */
+           display: inline-block;
+           position: relative;
+}
+
+/* إضافة لمسة احترافية: حركة لمعان تمر فوق الاسم كل 3 ثواني */
+h1::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+        
         .hero p { font-size: 1.2rem; color: #888; margin-top: 10px; animation: fadeInUp 1.2s ease; }
 
         .bio { max-width: 750px; margin: 25px auto; line-height: 1.8; color: #ccc; font-size: 1.15rem; }
