@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Automation | Hadil M. Hassan</title>
-    <!-- استدعاء نفس الخط اللي استخدمته في كودك -->
+    <!-- استدعاء نفس الخطوط والأيقونات من صفحتك الرئيسية -->
     <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
     
     <style>
+        /* سحب نفس المتغيرات من كودك */
         :root {
-            --gold: #d4af37; /* نفس اللون الذهبي في كودك */
-            --bg: #050505;   /* نفس الخلفية */
+            --gold: #d4af37;
+            --bg: #050505;
             --card-bg: #111;
         }
 
@@ -20,92 +22,123 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
+            text-align: center;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
             animation: fadeIn 1.2s ease;
         }
 
-        /* زر العودة بنفس روح التصميم */
+        /* تنسيق زر العودة بستايل الـ btn اللي عندك */
         .back-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            border: 2px solid var(--gold);
             color: var(--gold);
             text-decoration: none;
-            font-size: 0.9rem;
-            border: 1px solid var(--gold);
-            padding: 8px 16px;
-            border-radius: 20px;
-            transition: 0.3s;
-            display: inline-block;
+            border-radius: 50px;
             margin-bottom: 40px;
+            transition: 0.4s;
+            font-size: 0.9rem;
         }
         .back-btn:hover {
             background: var(--gold);
-            color: var(--bg);
-            box-shadow: 0 0 15px var(--gold);
+            color: #fff;
+            box-shadow: 0 0 20px var(--gold);
         }
 
-        header h1 {
-            font-size: 3rem;
-            font-weight: 900;
+        .section-title {
+            color: var(--gold);
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin: 0;
-            /* تأثير التدرج اللي استخدمته للنصوص */
-            background: linear-gradient(to right, #cf972d, #f1e37c, var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
-        .cert-card {
+        /* كارت الشهادة بنفس ستايل الـ card عندك */
+        .cert-display {
             background: var(--card-bg);
-            border: 1px solid #222;
+            padding: 30px;
             border-radius: 20px;
-            padding: 20px;
-            margin-top: 30px;
+            border: 1px solid #222;
+            margin: 40px 0;
             transition: 0.4s;
-            position: relative;
-            overflow: hidden;
         }
-        .cert-card:hover {
+        .cert-display:hover {
             border-color: var(--gold);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+            transform: scale(1.02);
         }
 
         .cert-img {
             width: 100%;
-            border-radius: 12px;
-            display: block;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .project-section {
-            margin-top: 60px;
+        .project-detail {
+            text-align: left;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 5px solid var(--gold);
+            margin-top: 50px;
         }
 
-        .project-card {
-            background: rgba(212, 175, 55, 0.05); /* لمسة ذهبية خفيفة */
-            border-left: 4px solid var(--gold);
-            padding: 25px;
-            border-radius: 0 20px 20px 0;
-            margin-top: 20px;
+        .project-detail i {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
-        h2 { color: var(--gold); font-weight: 600; }
-        p { color: #ccc; line-height: 1.8; }
+        .github-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
+        }
 
-        /* الأنميشن اللي استخدمتها في كودك */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
+    <div class="container">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+
+        <h1 class="section-title">Advanced Automation</h1>
+        <p style="color: #888;">Python Scripting • Web Scraping • Workflow Optimization</p>
+
+        <!-- الشهادة -->
+        <div class="cert-display">
+            <h2 style="margin-bottom: 25px;">Verified Certification</h2>
+            <img src="assets/automation-cert.jpg" alt="CS50 Automation Certificate" class="cert-img">
+            <p style="margin-top: 20px; color: var(--gold);">Issued by Harvard University</p>
+        </div>
+
+        <!-- تفاصيل المشروع -->
+        <div class="project-detail">
+            <i class="fas fa-robot"></i>
+            <h2 style="margin-top: 0;">Featured Project: Automated News Scraper</h2>
+            <p style="font-size: 1.1rem; color: #ccc;">
+                A robust Python-based solution that automates the collection of headlines from dynamic news platforms. 
+                The tool intelligently filters data based on user-defined criteria and exports organized results into 
+                professional Excel (XLSX) spreadsheets, saving hours of manual work.
+            </p>
+            <p><strong>Technologies:</strong> Python, BeautifulSoup, Pandas, Openpyxl.</p>
+            <a href="https://github.com" class="github-link">Explore Source Code on GitHub →</a>
+        </div>
+    </div>
+
+</body>
+</html>
     <div class="container">
         <a href="index.html" class="back-btn">← Back to Home</a>
 
