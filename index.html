@@ -13,6 +13,29 @@
             background: radical-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(5,5,5,1) 100%), url('https://freepik.com');
             background-size: cover; background-position: center; text-align: center; padding: 20px;
         }
+        @media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem !important; /* تصغير الاسم ليناسب عرض الشاشة */
+        letter-spacing: 4px !important;
+    }
+    .main-logo {
+        width: 180px !important; /* تصغير اللوغو على الموبايل */
+        margin-bottom: -5px;
+    }
+    .bio {
+        font-size: 0.95rem !important; /* تصغير النص ليكون أسهل للقراءة */
+        padding: 0 10px;
+    }
+    .hero {
+        padding: 10px;
+        height: auto; /* فك القيد عن الطول ليتحرك المحتوى براحته */
+        min-height: 100vh;
+    }
+    .badge {
+        font-size: 0.75rem !important;
+        padding: 5px 10px !important;
+    }
+        }
         .main-logo {
             width: 280px; 
             height: auto;
