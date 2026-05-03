@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hadil | Portfolio</title>
+  <style>
+    body {background-color: #0b0b0b; color: #f1f1f1; font-family:'Inter', sans-serif; text-align: center; margin: 0; padding: 0; }
+    .container { padding: 60px 20px; }
+    h1 { color: #d4af37; font-size: 2.5rem; letter-spacing: 3px; margin-bottom: 10px; }
+    .subtitle { font-size: 1.2rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
+    .bio { max-width: 700px; margin: 30px auto; line-height: 1.8; color: #ccc; font-size: 1.1 rem; }
+    .badges { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 40px 0; }
+    .badge { border: 1px solid #d4af37; padding: 8px 18px; border-radius: 4px; color: #d4af37; font-size: 0.9 rem; font-weight: bold; background: rgba(212, 175, 55, 0.05); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1000px; margin: 50px auto; padding:0 20px; }
+    .card { background: #161616; padding: 30px; border-radius: 12px; border: 1px solid #222; transition: 0.3s; text-align: left; }
+    .card:hover { border-color: #d4af37; transform: translateY(-5px); }
+    .card h3 { color: #d4af37; margin-top: 0; }
+    .btn { display: inline-block; padding: 16px 40px; background: #d4af37; color: #000; text-decoration: none; font-weight: bold; border-radius: 4px; transition: 0.3s; margin-top: 40px; }
+    .btn:hover { background: #fff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="font-size: 60px; color: #d4af37; margin-bottom: 20px;">{ &lt;/&gt; }</div>
+    <h1>HADIL M. HASSAN</h1>
+    <div class="subtitle">Software Developer & Data Specialist</div>
+
+    <p class="bio">
+      Passionate developer multi-certified by <b>Harvard CS50</b>.
+      Expert in building automation tools, managing complex databases, and performing advanced statistical analysis.
+    </p>
+
+    <div calss="badges">
+      <span class="badge">Python</span>
+      <span class="badge">SQL</span>
+      <span class="badge">R Language</span>
+      <span class="badge">Cybersecurity</span>
+      <span class="badge">Web Dev</span>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Automation</h3>
+        <p>Developing custom Python scripts for web scraping and task automation to save hundreds of manual hours.</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Building responsive, modern, and high-performance websites using HTML5, CSS3, and JavaScript.</p>
+      </div>
+      <div class="card">
+        <h3>Data Sciences</h3>
+        <p>Extracting insights from raw data using R and SQL, providing professional visualization and reports.</p>
+      </div>
+      <div class="card">
+        <h3>Cybersecurity</h3>
+        <p>Applying security best practices to ensue data integrity and safe software development.</p>
+      </div>
+    </div>
+
+    <a href="https://khamsat.com" class="btn">HIRE ME ON KHAMSAT</a>
+    <p style="margin-top: 20px; color: #555;">&copy; <span id="year"></span> | Built with Code</p>
+    <script>document.getElementById("year").innerHtml = new Date().getFullYear();</script>
+  </div>
+</body>
+</html>
