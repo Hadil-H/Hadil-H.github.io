@@ -3,87 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Analysis & SQL | Hadil M. Hassan</title>
-    <!-- Fonts & Icons -->
+    <title>Data & SQL | Hadil M. Hassan</title>
+    <!-- استدعاء الخطوط التقنية -->
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
     
     <style>
         :root {
-            --gold: #d4af37;
-            --bg: #050505;
-            --card-bg: #111;
+            --bg: #0d1117; /* نفس خلفية الأتمتة الغامقة */
+            --accent: #d4af37; /* اللون الذهبي الخاص بك */
+            --text: #c9d1d9;
+            --header: #ffffff;
         }
 
         body {
             background-color: var(--bg);
-            color: #fff;
+            color: var(--text);
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 60px 20px;
+        .wrapper {
+            max-width: 850px;
+            width: 90%;
+            padding: 40px 0;
             animation: fadeIn 1.2s ease;
         }
 
-        .back-link {
-            display: inline-block;
-            color: var(--gold);
+        .back-nav { margin-bottom: 30px; }
+        .back-nav a {
+            color: var(--accent);
             text-decoration: none;
-            margin-bottom: 30px;
+            font-family: 'Fira Code', monospace;
+            font-weight: bold;
+        }
+
+        header h1 {
+            color: var(--header);
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-family: 'Fira Code', monospace;
+            color: var(--accent);
+            background: rgba(212, 175, 55, 0.1);
+            padding: 5px 12px;
+            border-radius: 5px;
             font-size: 0.9rem;
+        }
+
+        .main-content { margin-top: 50px; }
+
+        /* Certificate Styling */
+        .cert-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
             transition: 0.3s;
         }
-        .back-link:hover { transform: translateX(-5px); opacity: 0.8; }
-
-        .header-section {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .header-section h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 0;
-            background: linear-gradient(to right, #cf972d, #f1e37c, var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .cert-card {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 25px;
-            border: 1px solid #222;
-            text-align: center;
-            transition: 0.4s;
-            margin-bottom: 30px;
-        }
-        
-        .cert-img {
+        .cert-card:hover { border-color: var(--accent); }
+        .cert-card img {
             width: 100%;
-            max-width: 750px;
-            border-radius: 15px;
+            border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .project-item {
-            background: rgba(212, 175, 55, 0.05);
-            border-left: 5px solid var(--gold);
+        /* Project Box - الستايل اللي عجبك في الأتمتة */
+        .project-box {
+            border-left: 4px solid var(--accent);
+            background: #161b22;
             padding: 30px;
-            border-radius: 0 20px 20px 0;
-            margin-top: 30px;
+            border-radius: 0 15px 15px 0;
+            margin-top: 25px;
             text-align: left;
         }
 
-        .project-item h3 { color: var(--gold); margin-top: 0; }
-        .tag { background: #222; padding: 4px 10px; border-radius: 5px; font-size: 0.8rem; margin-right: 5px; color: var(--gold); }
+        .project-box h3 { color: var(--header); margin-top: 0; font-size: 1.4rem; }
+        
+        .tech-stack { margin: 15px 0; }
+        .tech-stack span {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            background: #30363d;
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+
+        .btn-action {
+            display: inline-block;
+            margin-top: 20px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 10px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-action:hover { background: var(--accent); color: #000; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -93,40 +121,48 @@
 </head>
 <body>
 
-    <div class="container">
-        <a href="index.html" class="back-link"><i class="fas fa-database"></i> Back to Main Portfolio</a>
+    <div class="wrapper">
+        <nav class="back-nav">
+            <a href="index.html">~/back-to-home</a>
+        </nav>
 
-        <div class="header-section">
-            <h1>Data & Databases</h1>
-            <p style="color: #888;">Turning Raw Data into Actionable Insights</p>
-        </div>
+        <header>
+            <h1>Data & SQL</h1>
+            <span class="tagline">Relational Databases • Statistical R • Data Insights</span>
+        </header>
 
-        <!-- SQL Certification -->
-        <div class="cert-card">
-            <h2 style="font-size: 1.2rem; margin-bottom: 20px;">SQL Database Design (CS50 SQL)</h2>
-            <img src="assets/sql-cert.jpg" alt="SQL Certificate" class="cert-img">
-        </div>
+        <section class="main-content">
+            <h2>Verified Credentials</h2>
+            
+            <div class="cert-card">
+                <img src="assets/sql-cert.jpg" alt="CS50 SQL Certificate">
+                <p style="margin-top: 10px; font-family: 'Fira Code'; font-size: 0.8rem;">[ Certification: CS50 SQL ]</p>
+            </div>
 
-        <!-- R Certification -->
-        <div class="cert-card">
-            <h2 style="font-size: 1.2rem; margin-bottom: 20px;">Statistical Programming with R (CS50 R)</h2>
-            <img src="assets/r-cert.jpg" alt="R Certificate" class="cert-img">
-        </div>
+            <div class="cert-card">
+                <img src="assets/r-cert.jpg" alt="CS50 R Certificate">
+                <p style="margin-top: 10px; font-family: 'Fira Code'; font-size: 0.8rem;">[ Certification: CS50 R ]</p>
+            </div>
 
-        <!-- Projects -->
-        <h2 style="color: #fff; margin-top: 50px;">Data Projects</h2>
-        
-        <div class="project-item">
-            <h3><i class="fas fa-table"></i> Relational Database Architecture</h3>
-            <p>Designed and implemented complex relational schemas, optimizing queries with indexes and ensuring data integrity through triggers and constraints. Skilled in SQLite, MySQL, and PostgreSQL.</p>
-            <div><span class="tag">SQL</span> <span class="tag">Database Design</span> <span class="tag">Query Optimization</span></div>
-        </div>
+            <h2 style="margin-top: 50px;">Featured Analysis</h2>
+            
+            <div class="project-box">
+                <h3>Complex Schema Design</h3>
+                <p>Architected scalable relational databases from scratch, implementing normalization, advanced JOINs, and subqueries to handle large datasets efficiently.</p>
+                <div class="tech-stack">
+                    <span>PostgreSQL</span> <span>SQLite</span> <span>Database-Design</span>
+                </div>
+            </div>
 
-        <div class="project-item">
-            <h3><i class="fas fa-chart-line"></i> Statistical Analysis & Visualization</h3>
-            <p>Performed exploratory data analysis (EDA) using R, transforming messy datasets into clear, visual stories. Proficient in Tidyverse and Ggplot2 for professional data visualization.</p>
-            <div><span class="tag">R Programming</span> <span class="tag">Tidyverse</span> <span class="tag">EDA</span></div>
-        </div>
+            <div class="project-box">
+                <h3>Statistical Modeling with R</h3>
+                <p>Applied R programming to clean, transform, and visualize complex data, identifying trends through statistical models and Tidyverse tools.</p>
+                <div class="tech-stack">
+                    <span>R-Lang</span> <span>Ggplot2</span> <span>Data-Wrangling</span>
+                </div>
+                <a href="#" class="btn-action">View Repository</a>
+            </div>
+        </section>
     </div>
 
 </body>
