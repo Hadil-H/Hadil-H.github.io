@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cybersecurity | Hadil M. Hassan</title>
     <!-- Fonts & Icons -->
-    <link href="https://googleapis.com" rel="stylesheet">
+ <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
     
     <style>
+        /* سحب نفس المتغيرات من كودك */
         :root {
             --gold: #d4af37;
             --bg: #050505;
             --card-bg: #111;
-            --secure-red: #e74c3c; /* لون إضافي بسيط للسكيورتي */
         }
 
         body {
@@ -22,6 +22,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
 
         .container {
@@ -31,80 +32,78 @@
             animation: fadeIn 1.2s ease;
         }
 
-        .back-link {
+        /* تنسيق زر العودة بستايل الـ btn اللي عندك */
+        .back-btn {
             display: inline-block;
+            padding: 10px 30px;
+            border: 2px solid var(--gold);
             color: var(--gold);
             text-decoration: none;
-            margin-bottom: 30px;
+            border-radius: 50px;
+            margin-bottom: 40px;
+            transition: 0.4s;
             font-size: 0.9rem;
-            transition: 0.3s;
         }
-        .back-link:hover { transform: translateX(-5px); opacity: 0.8; }
-
-        .header-section {
-            text-align: center;
-            margin-bottom: 50px;
+        .back-btn:hover {
+            background: var(--gold);
+            color: #fff;
+            box-shadow: 0 0 20px var(--gold);
         }
 
-        .header-section h1 {
-            font-size: 3rem;
-            font-weight: 900;
+        .section-title {
+            color: var(--gold);
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin: 0;
-            background: linear-gradient(to right, #cf972d, #f1e37c, var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
-        .cert-card {
+        /* كارت الشهادة بنفس ستايل الـ card عندك */
+        .cert-display {
             background: var(--card-bg);
-            padding: 25px;
-            border-radius: 25px;
+            padding: 30px;
+            border-radius: 20px;
             border: 1px solid #222;
-            text-align: center;
+            margin: 40px 0;
             transition: 0.4s;
-            margin-bottom: 40px;
         }
-        .cert-card:hover { border-color: var(--gold); box-shadow: 0 0 20px rgba(212, 175, 55, 0.1); }
-        
+        .cert-display:hover {
+            border-color: var(--gold);
+            transform: scale(1.02);
+        }
+
         .cert-img {
             width: 100%;
-            max-width: 800px;
-            border-radius: 15px;
-            filter: grayscale(20%); /* لمسة تقنية هادئة */
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 40px 0;
-        }
-
-        .skill-tag {
-            background: #161616;
-            border: 1px solid #333;
-            padding: 15px;
-            border-radius: 12px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--gold);
-        }
-
-        .project-item {
-            background: rgba(212, 175, 55, 0.05);
-            border-left: 5px solid var(--gold);
-            padding: 30px;
-            border-radius: 0 20px 20px 0;
+        .project-detail {
             text-align: left;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 5px solid var(--gold);
+            margin-top: 50px;
         }
 
-        .project-item h3 { color: var(--gold); margin-top: 0; }
-        .project-item i { margin-right: 10px; color: var(--gold); }
+        .project-detail i {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .github-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
+        }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
@@ -112,40 +111,32 @@
 <body>
 
     <div class="container">
-        <a href="index.html" class="back-link"><i class="fas fa-shield-alt"></i> Back to Main Portfolio</a>
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+    
+    <h1 class="section-title">Data & Databases</h1>
+    <p style="color: #888;">SQL Architecture • Statistical Analysis • R Programming</p>
 
-        <div class="header-section">
-            <h1>Cybersecurity</h1>
-            <p style="color: #888;">Protecting Systems, Networks, and Data Integrity</p>
-        </div>
-
-        <!-- Certificate Section -->
-        <div class="cert-card">
-            <h2 style="font-size: 1.2rem; margin-bottom: 20px;">CS50 Cybersecurity Certified</h2>
-            <img src="assets/cyber-cert.jpg" alt="Cybersecurity Certificate" class="cert-img">
-            <p style="margin-top: 15px; color: var(--gold); font-size: 0.9rem;">Verified Academic Credential - Harvard University</p>
-        </div>
-
-        <!-- Core Knowledge Areas -->
-        <h2 style="text-align: center; color: #fff; margin-top: 50px;">Core Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-tag"><i class="fas fa-lock"></i> Cryptography</div>
-            <div class="skill-tag"><i class="fas fa-user-shield"></i> Identity Management</div>
-            <div class="skill-tag"><i class="fas fa-bug"></i> Vulnerability Assessment</div>
-            <div class="skill-tag"><i class="fas fa-network-wired"></i> Network Security</div>
-        </div>
-
-        <!-- Practical Application -->
-        <div class="project-item">
-            <h3><i class="fas fa-terminal"></i> Security-First Development</h3>
-            <p>
-                My approach to programming integrates security at the design phase. I focus on writing code that is resistant to common exploits like <b>SQL Injection</b> and <b>Cross-Site Scripting (XSS)</b>, ensuring that applications are robust against modern digital threats.
-            </p>
-            <p style="font-style: italic; color: #888; font-size: 0.9rem;">
-                *Projects under this specialization often involve secure authentication systems and data encryption scripts.
-            </p>
-        </div>
+    <div class="cert-display">
+        <h2 style="margin-bottom: 25px;">Verified Certifications</h2>
+        <!-- يمكنك وضع صورتين هنا للـ SQL والـ R -->
+        <img src="assets/sql-cert.jpg" alt="SQL Certificate" class="cert-img" style="margin-bottom: 15px;">
+        <img src="assets/r-cert.jpg" alt="R Certificate" class="cert-img">
+        <p style="margin-top: 20px; color: var(--gold);">Issued by Harvard University (CS50 SQL & R)</p>
     </div>
+
+    <div class="project-detail">
+        <i class="fas fa-database"></i>
+        <h2 style="margin-top: 0;">Featured: Database Schema Design</h2>
+        <p style="font-size: 1.1rem; color: #ccc;">
+            Engineering scalable relational databases and performing deep data analysis. 
+            Transforming raw datasets into actionable insights through optimized 
+            SQL queries and statistical modeling in R.
+        </p>
+        <p><strong>Technologies:</strong> SQL (PostgreSQL/SQLite), R, Tidyverse.</p>
+        <a href="https://github.com" class="github-link">Explore Data Projects →</a>
+    </div>
+</div>
+
 
 </body>
 </html>
