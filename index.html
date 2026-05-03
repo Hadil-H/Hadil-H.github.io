@@ -10,10 +10,17 @@
         body { background-color: var(--bg); color: #fff; font-family: 'Poppins', sans-serif; margin: 0; overflow-x: hidden; }
         .hero { 
             height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; 
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://freepik.com');
-            background-size: cover; background-position: center; padding: 20px;
+            background: radical-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(5,5,5,1) 100%), url('https://freepik.com');
+            background-size: cover; background-position: center; text-align: center; padding: 20px;
         }
-        .hero h1 { font-size: 3.5rem; color: var(--gold); margin: 0; letter-spacing: 5px; animation: fadeInDown 1s ease; }
+        h1 { 
+            font-size: 4rem;
+            background: linear-gardient(to bottom, #f9e295 0%, #d4af37 50%, #a67c00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+            margin: 0; letter-spacing: 8px; text-transform: uppercase; font-weight: 900;
+        }
         .hero p { font-size: 1.2rem; color: #888; margin-top: 10px; animation: fadeInUp 1.2s ease; }
 
         .bio { max-width: 750px; margin: 25px auto; line-height: 1.8; color: #ccc; font-size: 1.15rem; }
