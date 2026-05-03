@@ -5,165 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data & SQL | Hadil M. Hassan</title>
     <!-- استدعاء الخطوط التقنية -->
+    <!-- استدعاء نفس الخطوط والأيقونات من صفحتك الرئيسية -->
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
     
     <style>
+        /* سحب نفس المتغيرات من كودك */
         :root {
-            --bg: #0d1117; /* نفس خلفية الأتمتة الغامقة */
-            --accent: #d4af37; /* اللون الذهبي الخاص بك */
-            --text: #c9d1d9;
-            --header: #ffffff;
+            --gold: #d4af37;
+            --bg: #050505;
+            --card-bg: #111;
         }
 
         body {
             background-color: var(--bg);
-            color: var(--text);
+            color: #fff;
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
+            text-align: center;
         }
 
-        .wrapper {
-            max-width: 850px;
-            width: 90%;
-            padding: 40px 0;
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
             animation: fadeIn 1.2s ease;
         }
 
-        .back-nav { margin-bottom: 30px; }
-        .back-nav a {
-            color: var(--accent);
+        /* تنسيق زر العودة بستايل الـ btn اللي عندك */
+        .back-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            border: 2px solid var(--gold);
+            color: var(--gold);
             text-decoration: none;
-            font-family: 'Fira Code', monospace;
-            font-weight: bold;
-        }
-
-        header h1 {
-            color: var(--header);
-            font-size: 2.8rem;
-            font-weight: 900;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .tagline {
-            font-family: 'Fira Code', monospace;
-            color: var(--accent);
-            background: rgba(212, 175, 55, 0.1);
-            padding: 5px 12px;
-            border-radius: 5px;
+            border-radius: 50px;
+            margin-bottom: 40px;
+            transition: 0.4s;
             font-size: 0.9rem;
         }
-
-        .main-content { margin-top: 50px; }
-
-        /* Certificate Styling */
-        .cert-card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 30px;
-            transition: 0.3s;
+        .back-btn:hover {
+            background: var(--gold);
+            color: #fff;
+            box-shadow: 0 0 20px var(--gold);
         }
-        .cert-card:hover { border-color: var(--accent); }
-        .cert-card img {
+
+        .section-title {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* كارت الشهادة بنفس ستايل الـ card عندك */
+        .cert-display {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #222;
+            margin: 40px 0;
+            transition: 0.4s;
+        }
+        .cert-display:hover {
+            border-color: var(--gold);
+            transform: scale(1.02);
+        }
+
+        .cert-img {
             width: 100%;
-            border-radius: 8px;
+            max-width: 700px;
+            border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* Project Box - الستايل اللي عجبك في الأتمتة */
-        .project-box {
-            border-left: 4px solid var(--accent);
-            background: #161b22;
-            padding: 30px;
-            border-radius: 0 15px 15px 0;
-            margin-top: 25px;
+        .project-detail {
             text-align: left;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 5px solid var(--gold);
+            margin-top: 50px;
         }
 
-        .project-box h3 { color: var(--header); margin-top: 0; font-size: 1.4rem; }
-        
-        .tech-stack { margin: 15px 0; }
-        .tech-stack span {
-            font-family: 'Fira Code', monospace;
-            font-size: 0.8rem;
-            background: #30363d;
-            color: var(--accent);
-            padding: 4px 10px;
-            border-radius: 4px;
-            margin-right: 8px;
+        .project-detail i {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
-        .btn-action {
-            display: inline-block;
-            margin-top: 20px;
-            border: 1px solid var(--accent);
-            color: var(--accent);
-            padding: 10px 25px;
-            border-radius: 6px;
+        .github-link {
+            color: var(--gold);
             text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
+            font-weight: 600;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
         }
-        .btn-action:hover { background: var(--accent); color: #000; }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
-    <div class="wrapper">
-        <nav class="back-nav">
-            <a href="index.html">~/back-to-home</a>
-        </nav>
+    <div class="container">
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+    
+    <h1 class="section-title">Data & Databases</h1>
+    <p style="color: #888;">SQL Architecture • Statistical Analysis • Data Engineering</p>
 
-        <header>
-            <h1>Data & SQL</h1>
-            <span class="tagline">Relational Databases • Statistical R • Data Insights</span>
-        </header>
-
-        <section class="main-content">
-            <h2>Verified Credentials</h2>
-            
-            <div class="cert-card">
-                <img src="assets/sql-cert.jpg" alt="CS50 SQL Certificate">
-                <p style="margin-top: 10px; font-family: 'Fira Code'; font-size: 0.8rem;">[ Certification: CS50 SQL ]</p>
-            </div>
-
-            <div class="cert-card">
-                <img src="assets/r-cert.jpg" alt="CS50 R Certificate">
-                <p style="margin-top: 10px; font-family: 'Fira Code'; font-size: 0.8rem;">[ Certification: CS50 R ]</p>
-            </div>
-
-            <h2 style="margin-top: 50px;">Featured Analysis</h2>
-            
-            <div class="project-box">
-                <h3>Complex Schema Design</h3>
-                <p>Architected scalable relational databases from scratch, implementing normalization, advanced JOINs, and subqueries to handle large datasets efficiently.</p>
-                <div class="tech-stack">
-                    <span>PostgreSQL</span> <span>SQLite</span> <span>Database-Design</span>
-                </div>
-            </div>
-
-            <div class="project-box">
-                <h3>Statistical Modeling with R</h3>
-                <p>Applied R programming to clean, transform, and visualize complex data, identifying trends through statistical models and Tidyverse tools.</p>
-                <div class="tech-stack">
-                    <span>R-Lang</span> <span>Ggplot2</span> <span>Data-Wrangling</span>
-                </div>
-                <a href="#" class="btn-action">View Repository</a>
-            </div>
-        </section>
+    <!-- 1. قسم الشهادات -->
+    <div class="cert-display">
+        <h2 style="margin-bottom: 25px;">Verified Certifications</h2>
+        <!-- صورة شهادة SQL -->
+        <img src="assets/sql-cert.jpg" alt="CS50 SQL Certificate" class="cert-img" style="margin-bottom: 20px;">
+        <!-- صورة شهادة R -->
+        <img src="assets/r-cert.jpg" alt="CS50 R Certificate" class="cert-img">
+        <p style="margin-top: 20px; color: var(--gold);">Issued by Harvard University (CS50 SQL & CS50 R)</p>
     </div>
+
+    <!-- 2. تفاصيل المشروع -->
+    <div class="project-detail">
+        <i class="fas fa-database"></i>
+        <h2 style="margin-top: 0;">Featured Project: Database Schema Design</h2>
+        <p style="font-size: 1.1rem; color: #ccc;">
+            Expertise in engineering scalable relational databases and performing advanced statistical analysis. 
+            I focus on optimizing complex SQL queries, ensuring data integrity through constraints, and 
+            transforming raw datasets into meaningful visual insights using R.
+        </p>
+        <p><strong>Technologies:</strong> SQL (PostgreSQL, SQLite), R Programming, Tidyverse, Data Modeling.</p>
+        <a href="https://github.com" class="github-link">Explore Data Insights on GitHub →</a>
+    </div>
+</div>
+
 
 </body>
 </html>
