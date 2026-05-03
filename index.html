@@ -87,3 +87,101 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadil | Portfolio</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root { --gold: #d4af37; --bg: #050505; }
+        body { background-color: var(--bg); color: #fff; font-family: 'Poppins', sans-serif; margin: 0; text-align: center; }
+        
+        .hero { 
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://freepik.com');
+            background-size: cover; background-position: center; padding: 20px;
+        }
+        
+        h1 { font-size: 3.5rem; color: var(--gold); margin: 0; letter-spacing: 5px; text-transform: uppercase; }
+        
+        /* الفقرة التعريفية القوية تحت الاسم مباشرة */
+        .bio { max-width: 750px; margin: 25px auto; line-height: 1.8; color: #ccc; font-size: 1.15rem; }
+        .bio b { color: var(--gold); }
+
+        .badges { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; justify-content: center; }
+        .badge { border: 1px solid var(--gold); padding: 6px 15px; border-radius: 4px; color: var(--gold); font-size: 0.85rem; font-weight: bold; background: rgba(212, 175, 55, 0.1); }
+
+        /* تنسيق الفقرات (الخدمات) تحت بستايل الكروت المودرن */
+        .section { padding: 80px 10%; background-color: #080808; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: #111; padding: 40px; border-radius: 15px; border: 1px solid #1a1a1a; transition: 0.4s; text-align: left; position: relative; overflow: hidden; }
+        .card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1); }
+        .card i { font-size: 35px; color: var(--gold); margin-bottom: 20px; }
+        .card h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.4rem; }
+        .card p { line-height: 1.6; color: #bbb; font-size: 0.95rem; }
+
+        .btn { padding: 15px 40px; background: var(--gold); color: #000; text-decoration: none; font-weight: bold; border-radius: 50px; transition: 0.3s; margin-top: 40px; display: inline-block; }
+        .btn:hover { background: #fff; box-shadow: 0 0 25px var(--gold); transform: scale(1.05); }
+
+        .footer { padding: 40px; color: #444; font-size: 0.8rem; border-top: 1px solid #111; }
+    </style>
+</head>
+<body>
+
+    <!-- الجزء العلوي: الاسم والفقرة التعريفية واللوغو -->
+    <div class="hero">
+        <div style="font-size: 50px; color: var(--gold); margin-bottom: 15px;">{ &lt;/&gt; }</div>
+        <h1>HADIL M. HASSAN</h1>
+        
+        <p class="bio">
+            Passionate developer multi-certified by <b>Harvard University (CS50)</b>. 
+            Expert in building automation tools, managing complex databases, and performing advanced statistical analysis.
+        </p>
+        
+        <div class="badges">
+            <span class="badge"><i class="fab fa-python"></i> Python</span>
+            <span class="badge"><i class="fas fa-database"></i> SQL</span>
+            <span class="badge"><i class="fas fa-chart-line"></i> R Language</span>
+            <span class="badge"><i class="fas fa-code"></i> HTML & CSS</span>
+            <span class="badge"><i class="fas fa-shield-alt"></i> Security</span>
+        </div>
+        
+        <a href="#work" class="btn">View My Expertise</a>
+    </div>
+
+    <!-- الجزء السفلي: الفقرات المشروحة بالأيقونات (مثل آخر تحديث) -->
+    <div class="section" id="work">
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-robot"></i>
+                <h3>Advanced Automation</h3>
+                <p>Developing custom Python scripts for web scraping and workflow automation to save hundreds of manual hours.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Building responsive, modern, and high-performance websites using HTML5, CSS3, and JavaScript.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-brain"></i>
+                <h3>Data Science</h3>
+                <p>Extracting insights from raw data using R and SQL, providing professional visualizations and reports.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Cybersecurity</h3>
+                <p>Applying security best practices to ensure data integrity and safe software development.</p>
+            </div>
+        </div>
+        
+        <a href="https://khamsat.com" class="btn" style="background: transparent; color: var(--gold); border: 2px solid var(--gold); margin-top: 60px;">Contact Me via Khamsat</a>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 | Hadil M. Hassan | Professional Developer Portfolio
+    </div>
+
+</body>
+</html>
