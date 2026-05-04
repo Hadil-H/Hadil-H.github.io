@@ -102,63 +102,63 @@
             padding-bottom: 2px;
         }
         .project-showcase {
-    position: relative;
-    width: 100%;
-    max-width: 850px;
-    margin: 40px auto;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 15px;
-    border: 1px solid #333;
-}
-
-/* حالة الكود الافتراضية */
-.code-layer {
-    transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-.code-layer img { width: 100%; display: block; }
-
-/* حالة النتيجة المخفية */
-.result-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85); /* تعتيم الخلفية لإبراز الإكسل */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; /* مخفية */
-    transform: scale(1.1); /* تبدأ بحجم أكبر قليلاً */
-    transition: all 0.5s ease;
-}
-
-.result-layer img {
-    width: 80%; /* تظهر النتيجة بوضوح في المنتصف */
-    border-radius: 10px;
-    box-shadow: 0 0 30px var(--gold);
-}
-
-.status-badge {
-    color: var(--gold);
-    font-family: 'Fira Code', monospace;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-/* التفاعل عند وضع الماوس (Hover) */
-.project-showcase:hover .code-layer {
-    filter: blur(5px); /* تشويش الكود */
-    transform: scale(0.95); /* تصغير الكود قليلاً */
-}
-
-.project-showcase:hover .result-layer {
-    opacity: 1; /* إظهار النتيجة */
-    transform: scale(1); /* تعود لحجمها الطبيعي */
-}
+            position: relative;
+            width: 100%;
+            max-width: 850px;
+            margin: 40px auto;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 15px;
+            border: 1px solid #333;
+        }
+        
+        /* حالة الكود الافتراضية */
+        .code-layer {
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+        
+        .code-layer img { width: 100%; display: block; }
+        
+        /* حالة النتيجة المخفية */
+        .result-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85); /* تعتيم الخلفية لإبراز الإكسل */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; /* مخفية */
+            transform: scale(1.1); /* تبدأ بحجم أكبر قليلاً */
+            transition: all 0.5s ease;
+        }
+        
+        .result-layer img {
+            width: 80%; /* تظهر النتيجة بوضوح في المنتصف */
+            border-radius: 10px;
+            box-shadow: 0 0 30px var(--gold);
+        }
+        
+        .status-badge {
+            color: var(--gold);
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        /* التفاعل عند وضع الماوس (Hover) */
+        .project-showcase:hover .code-layer {
+            filter: blur(5px); /* تشويش الكود */
+            transform: scale(0.95); /* تصغير الكود قليلاً */
+        }
+        
+        .project-showcase:hover .result-layer {
+            opacity: 1; /* إظهار النتيجة */
+            transform: scale(1); /* تعود لحجمها الطبيعي */
+        }
         
         .main-code-img {
             width: 85%; /* نترك مساحة للنتيجة */
