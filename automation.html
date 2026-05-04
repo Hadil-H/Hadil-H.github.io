@@ -101,30 +101,10 @@
             border-bottom: 1px solid var(--gold);
             padding-bottom: 2px;
         }
-
-        .split-showcase {
-            position: relative;
-            margin: 40px auto;
-            max-width: 900px;
-        }
-        
         .main-code-img {
             width: 85%; /* نترك مساحة للنتيجة */
             border-radius: 15px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-        }
-        
-        .result-overlay {
-            position: absolute;
-            bottom: -20px;
-            right: 0;
-            width: 45%;
-            background: #1e1e1e;
-            border: 2px solid var(--gold);
-            border-radius: 12px;
-            padding: 5px;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
-            z-index: 10;
         }
         
         .result-overlay img { width: 100%; border-radius: 8px; }
@@ -157,15 +137,15 @@
             <i class="fas fa-robot"></i>
             <h2>Project Logic: Web News Scraper</h2>
             
-            <div class="split-showcase">
+            <div class="project-showcase">
                 <!-- صورة الكود (الأساس) -->
-                <div class="code-container">
+                <div class="code-layer">
                     <img src="script.png" alt="Python Web Scraper Code" class="main-code-img">
                 </div>
                 
                 <!-- صورة ملف الإكسل (النتيجة تطفو فوق الكود) -->
-                <div class="result-overlay">
-                    <div class="result-header">Tech_News.csv (Output)</div>
+                <div class="result-layer">
+                    <div class="status-badge">RESULT GENERATED ✅</div>
                     <img src="excel.png" alt="Excel Result Preview">
                 </div>
             </div>
