@@ -102,6 +102,35 @@
             padding-bottom: 2px;
         }
 
+        .split-showcase {
+    position: relative;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.main-code-img {
+    width: 85%; /* نترك مساحة للنتيجة */
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.result-overlay {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 45%;
+    background: #1e1e1e;
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    padding: 5px;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+    z-index: 10;
+}
+
+.result-overlay img { width: 100%; border-radius: 8px; }
+.result-header { color: var(--gold); font-size: 0.7rem; padding: 5px; font-family: monospace; }
+        
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -125,16 +154,28 @@
 
         <!-- تفاصيل المشروع -->
         <div class="project-detail">
-            <i class="fas fa-robot"></i>
-            <h2 style="margin-top: 0;">Featured Project: Automated News Scraper</h2>
-            <p style="font-size: 1.1rem; color: #ccc;">
-                A robust Python-based solution that automates the collection of headlines from dynamic news platforms. 
-                The tool intelligently filters data based on user-defined criteria and exports organized results into 
-                professional Excel (XLSX) spreadsheets, saving hours of manual work.
-            </p>
-            <p><strong>Technologies:</strong> Python, BeautifulSoup, Pandas, Openpyxl.</p>
-            <a href="https://github.com" class="github-link">Explore Source Code on GitHub →</a>
+    <i class="fas fa-robot"></i>
+    <h2>Project Logic: Web News Scraper</h2>
+    
+    <div class="split-showcase">
+        <!-- صورة الكود (الأساس) -->
+        <div class="code-container">
+            <img src="assets/scraper-code.png" alt="Python Web Scraper Code" class="main-code-img">
         </div>
+        
+        <!-- صورة ملف الإكسل (النتيجة تطفو فوق الكود) -->
+        <div class="result-overlay">
+            <div class="result-header">Tech_News.csv (Output)</div>
+            <img src="assets/excel-output.png" alt="Excel Result Preview">
+        </div>
+    </div>
+
+    <div class="description-text">
+        <p>This Python script utilizes <b>BeautifulSoup</b> and <b>Requests</b> to crawl tech news platforms. 
+        It extracts the latest headlines, sanitizes the data, and exports it into a structured CSV format compatible with Excel.</p>
+    </div>
+        </div>
+        
     </div>
 
 </body>
