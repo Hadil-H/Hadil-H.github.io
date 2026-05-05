@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data & SQL | Hadil M. Hassan</title>
-    <!-- استدعاء الخطوط التقنية -->
+    <title>Advanced Automation | Hadil M. Hassan</title>
     <!-- استدعاء نفس الخطوط والأيقونات من صفحتك الرئيسية -->
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
@@ -102,6 +101,79 @@
             border-bottom: 1px solid var(--gold);
             padding-bottom: 2px;
         }
+        .project-showcase {
+            position: relative;
+            width: 100%;
+            max-width: 850px;
+            margin: 40px auto;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 15px;
+            border: 1px solid #333;
+        }
+        
+        .project-showcase {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: transparent;
+            border: none;
+            overflow: visible; /* عشان النص ما ينقص */
+        }
+    
+        .result-layer {
+            position: relative;
+            opacity: 1;
+            transform: scale(1);
+            background: #111;
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+    
+        .status-badge {
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 4px 12px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    
+        .result-layer img {
+            width: 65%; /* تصغير الحجم ليكون متناسقاً مع الكود */
+            max-width: 600px; /* ضمان عدم كبرها الزائد في الشاشات الواسعة */
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* إضافة ظل بسيط ليعطي عمق */
+        }
+        
+        /* تعديل للموبايل لكي لا تصبح صغيرة جداً */
+        @media (max-width: 768px) {
+            .result-layer img {
+                width: 90%; /* نكبرها قليلاً على الموبايل لتسهيل القراءة */
+            }
+        }
+        
+    
+        .code-layer {
+            filter: none !important;
+            transform: none !important;
+        }
+        
+        .main-code-img {
+            width: 85%; /* نترك مساحة للنتيجة */
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        
+        .result-overlay img { width: 100%; border-radius: 8px; }
+        .result-header { color: var(--gold); font-size: 0.7rem; padding: 5px; font-family: monospace; }
+        
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(30px); }
@@ -112,35 +184,54 @@
 <body>
 
     <div class="container">
-    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
-    
-    <h1 class="section-title">Data & Databases</h1>
-    <p style="color: #888;">SQL Architecture • Statistical Analysis • Data Engineering</p>
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
 
-    <!-- 1. قسم الشهادات -->
-    <div class="cert-display">
-        <h2 style="margin-bottom: 25px;">Verified Certifications</h2>
-        <!-- صورة شهادة SQL -->
-        <img src="assets/sql-cert.jpg" alt="CS50 SQL Certificate" class="cert-img" style="margin-bottom: 20px;">
-        <!-- صورة شهادة R -->
-        <img src="assets/r-cert.jpg" alt="CS50 R Certificate" class="cert-img">
-        <p style="margin-top: 20px; color: var(--gold);">Issued by Harvard University (CS50 SQL & CS50 R)</p>
+        <h1 class="section-title">DATA & DATABASES</h1>
+        <p style="color: #888;">Python Scripting • Web Scraping • Workflow Optimization</p>
+
+        <!-- الشهادة -->
+        <div class="cert-display">
+            <h2 style="margin-bottom: 25px;">Verified Certification</h2>
+            <img src="sql_cert.png" alt="CS50 Database Certificate" class="cert-img">
+            <p style="margin-top: 20px; color: var(--gold);">Issued by Harvard University</p>
+        </div>
+
+        
+        <!-- الشهادة -->
+        <div class="cert-display">
+            <h2 style="margin-bottom: 25px;">Verified Certification</h2>
+            <img src="r_cert.png" alt="CS50 R Language Certificate" class="cert-img">
+            <p style="margin-top: 20px; color: var(--gold);">Issued by Harvard University</p>
+        </div>
+
+        <!-- تفاصيل المشروع -->
+        <div class="project-detail">
+            <i class="fas fa-robot"></i>
+            <h2>Project Logic: Web News Scraper</h2>
+            
+            <div class="project-showcase">
+                <!-- صورة الكود (الأساس) -->
+                <div class="code-layer">
+                    <img src="query.png" alt="Python Web Scraper Code" class="main-code-img">
+                </div>
+                
+                <!-- صورة ملف الإكسل (النتيجة تطفو فوق الكود) -->
+                <div class="result-layer">
+                    <div class="status-badge">RESULT GENERATED ✅</div>
+                    <img src="table.png" alt="Excel Result Preview">
+                </div>
+            </div>
+        
+            <div class="description-text">
+                <p>This Python script utilizes <b>BeautifulSoup</b> and <b>Requests</b> to crawl tech news platforms. 
+                It extracts the latest headlines, sanitizes the data, and exports it into a structured CSV format compatible with Excel.</p>
+            </div>
+         </div>
     </div>
-
-    <!-- 2. تفاصيل المشروع -->
-    <div class="project-detail">
-        <i class="fas fa-database"></i>
-        <h2 style="margin-top: 0;">Featured Project: Database Schema Design</h2>
-        <p style="font-size: 1.1rem; color: #ccc;">
-            Expertise in engineering scalable relational databases and performing advanced statistical analysis. 
-            I focus on optimizing complex SQL queries, ensuring data integrity through constraints, and 
-            transforming raw datasets into meaningful visual insights using R.
-        </p>
-        <p><strong>Technologies:</strong> SQL (PostgreSQL, SQLite), R Programming, Tidyverse, Data Modeling.</p>
-        <a href="https://github.com" class="github-link">Explore Data Insights on GitHub →</a>
-    </div>
-</div>
-
 
 </body>
 </html>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+
+    </div>
