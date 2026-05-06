@@ -101,6 +101,79 @@
             border-bottom: 1px solid var(--gold);
             padding-bottom: 2px;
         }
+        .project-showcase {
+            position: relative;
+            width: 100%;
+            max-width: 850px;
+            margin: 40px auto;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 15px;
+            border: 1px solid #333;
+        }
+        
+        .project-showcase {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: transparent;
+            border: none;
+            overflow: visible; /* عشان النص ما ينقص */
+        }
+    
+        .result-layer {
+            position: relative;
+            opacity: 1;
+            transform: scale(1);
+            background: #111;
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+    
+        .status-badge {
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 4px 12px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    
+        .result-layer img {
+            width: 65%; /* تصغير الحجم ليكون متناسقاً مع الكود */
+            max-width: 600px; /* ضمان عدم كبرها الزائد في الشاشات الواسعة */
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* إضافة ظل بسيط ليعطي عمق */
+        }
+        
+        /* تعديل للموبايل لكي لا تصبح صغيرة جداً */
+        @media (max-width: 768px) {
+            .result-layer img {
+                width: 90%; /* نكبرها قليلاً على الموبايل لتسهيل القراءة */
+            }
+        }
+        
+    
+        .code-layer {
+            filter: none !important;
+            transform: none !important;
+        }
+        
+        .main-code-img {
+            width: 85%; /* نترك مساحة للنتيجة */
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        
+        .result-overlay img { width: 100%; border-radius: 8px; }
+        .result-header { color: var(--gold); font-size: 0.7rem; padding: 5px; font-family: monospace; }
+        
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(30px); }
